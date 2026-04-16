@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.local
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+frontend/dist/
+backend/.coverage
+postgres_data/

@@ -1,0 +1,15 @@
+pyproject.toml
+app/__init__.py
+app/api.py
+app/main.py
+app/models.py
+app/schemas.py
+app/services.py
+app/core/config.py
+app/core/security.py
+app/db/session.py
+br_massoterapia_backend.egg-info/PKG-INFO
+br_massoterapia_backend.egg-info/SOURCES.txt
+br_massoterapia_backend.egg-info/dependency_links.txt
+br_massoterapia_backend.egg-info/requires.txt
+br_massoterapia_backend.egg-info/top_level.txt
