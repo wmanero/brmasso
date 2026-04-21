@@ -19,7 +19,7 @@ async def lifespan(_: FastAPI):
     yield
 
 
-app = FastAPI(title=settings.project_name, lifespan=lifespan)
+app = FastAPI(title="Bárbara Rodrigues - Massoterapeuta", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.frontend_url, "http://localhost:4173", "http://localhost:5173"],

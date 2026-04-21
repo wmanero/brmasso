@@ -32,3 +32,7 @@ Aplicacao full stack para a `@b.r.massoterapia` com React, FastAPI e PostgreSQL.
 ## Deploy OCI
 
 Guia de producao em [infra/DEPLOY_OCI.md](/c:/Users/Riartts/Documents/github/br-massoterapia-app/infra/DEPLOY_OCI.md).
+
+## Status Atual
+
+Resumo operacional e checklist de retomada em [STATUS_PROJETO.md](/c:/Users/Riartts/Documents/github/br-massoterapia-app/STATUS_PROJETO.md).

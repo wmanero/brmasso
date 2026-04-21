@@ -120,22 +120,22 @@ function App() {
       anamnesis:
         clientForm.anamnesis_summary && clientForm.anamnesis_pain_points
           ? {
-              summary: clientForm.anamnesis_summary,
-              pain_points: clientForm.anamnesis_pain_points,
-              contraindications: clientForm.contraindications || null,
-            }
+            summary: clientForm.anamnesis_summary,
+            pain_points: clientForm.anamnesis_pain_points,
+            contraindications: clientForm.contraindications || null,
+          }
           : undefined,
       plans: clientForm.plan_title
         ? [
-            {
-              title: clientForm.plan_title,
-              session_type: clientForm.plan_session_type,
-              sessions_total: Number(clientForm.plan_sessions_total),
-              sessions_remaining: Number(clientForm.plan_sessions_remaining),
-              price_total: Number(clientForm.plan_price_total || 0),
-              active: true,
-            },
-          ]
+          {
+            title: clientForm.plan_title,
+            session_type: clientForm.plan_session_type,
+            sessions_total: Number(clientForm.plan_sessions_total),
+            sessions_remaining: Number(clientForm.plan_sessions_remaining),
+            price_total: Number(clientForm.plan_price_total || 0),
+            active: true,
+          },
+        ]
         : [],
     }
     await api.createClient(payload)
@@ -212,7 +212,7 @@ function App() {
       <section className="hero-panel">
         <div>
           <p className="eyebrow">@b.r.massoterapia</p>
-          <h1>CRM de massoterapia com agenda, anamnese e pagamentos</h1>
+          <h1>Bárbara Rodrigues - Massoterapeuta</h1>
           <p className="hero-copy">
             Painel operacional com login, cadastro de clientes, agendamentos e recebimentos conectados na API.
           </p>
