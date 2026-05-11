@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espaço Bárbara Rodrigues Massoterapia &amp; SPA</title>
+  <link rel="icon" type="image/png" href="./img/logo/mini_logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/logo/mini_logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/logo/mini_logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/logo/mini_logo.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <meta name="theme-color" content="#2f6fa8" />
+  <meta name="description"
+    content="Bem-vindo ao Espaço Bárbara Rodrigues Massoterapia &amp; SPA. Técnicas terapêuticas, ambiente relaxante e agenda online." />
+  <link rel="preload" href="./img/local.jpg" as="image" />
+  <link rel="preload" href="./img/logo/logo.png" as="image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header com logo e navegação -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="./img/logo/logo_espaco_sem_fundo.png" alt="Logotipo Espaço Bárbara Rodrigues" class="logo" />
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#tecnicas">Técnicas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero - imagem de destaque -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Espaço Bárbara Rodrigues<br />Massoterapia &amp; SPA</h1>
+      <p>Seu refúgio de bem-estar. Técnicas de massoterapia, relaxamento <br>e cuidados personalizados.</p>
+      <a href="#agenda" class="cta-button">Agende sua sessão</a>
+    </div>
+  </section>
+
+  <!-- Carrossel de técnicas terapêuticas -->
+  <section id="tecnicas" class="section carousel-section">
+    <div class="container">
+      <h2>Técnicas Terapêuticas</h2>
+      <div class="carousel" id="techCarousel">
+        <div class="carousel-track">
+          <div class="carousel-item"><img src="./img/carrossel/post_bioenergetica.png" alt="Bioenergética" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_linfatica.png" alt="Drenagem Linfática" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_miofascial.png" alt="Liberação Miofascial" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_pedras.png" alt="Pedras Quentes" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_shiatsu.png" alt="Shiatsu" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_quick.png" alt="Quick Massage" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_relaxante.png" alt="Massagem Relaxante" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_terapeutica.png" alt="Massagem Terapêutica" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_quiro.png" alt="Quiroterapia" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_reflexologia.png" alt="Reflexologia" /></div>
+          <div class="carousel-item"><img src="./img/carrossel/post_spa_pes.png" alt="SPA dos PÉS" /></div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior">&#9664;</button>
+        <button class="carousel-btn next" aria-label="Próximo">&#9654;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a Barbara -->
+  <section id="sobre" class="section about-section">
+    <div class="container about-inner">
+      <img src="./img/imagem_barbara.png" alt="Bárbara Rodrigues" class="about-img" />
+      <div class="about-text">
+        <h2>Sobre Bárbara Rodrigues</h2>
+        <p>Bárbara Rodrigues é especialista em terapias corporais que promovem equilíbrio físico e emocional.</p>
+        <p>Formada em técnicas como Shiatsu, Reflexologia e Drenagem Linfátiica, ela personaliza cada sessão conforme as
+          necessidades do cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+  <section id="agenda" class="section agenda-section">
+    <div class="container agenda-inner">
+      <h2>Agenda</h2>
+      <img src="./img/imagem_agenda.png" alt="Agenda de atendimentos" class="agenda-img" />
+      <p>Você merece uma pausa. <br>Atendemos com hora marcada. <br>Reserve aqui seu momento de autocuidado.</p>
+      <br />
+      <a href="#contato" class="cta-button">Garantir meu horário</a>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section contact-section">
+    <div class="container">
+      <h2>Contato</h2>
+      <form class="contact-form" id="whatsappForm">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Meu WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required />
+        </div>
+        <div class="form-group">
+          <label for="tecnica">Técnica de interesse</label>
+          <select id="tecnica" name="tecnica" required>
+            <option value="" selected disabled>Escolha aqui!</option>
+            <option value="Shiatsu">Shiatsu</option>
+            <option value="Drenagem Linfática">Drenagem Linfática</option>
+            <option value="Pedras Quentes">Pedras Quentes</option>
+            <option value="Massagem Relaxante">Massagem Relaxante</option>
+            <option value="Massagem Terapêutica">Massagem Terapêutica</option>
+            <option value="Quiroterapia">Quiroterapia</option>
+            <option value="Bioenergética">Bioenergética</option>
+            <option value="Liberação Miofascial">Liberação Miofascial</option>
+            <option value="Quick Massage">Quick Massage</option>
+            <option value="Reflexologia">Reflexologia</option>
+            <option value="SPA dos PÉS">SPA dos PÉS</option>
+            <option value="Preciso de Indicação">Preciso de Indicação</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"
+            placeholder="Conte brevemente seu objetivo ou melhor horário para atendimento." required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Enviar via WhatsApp</button>
+        <p class="form-help">Você será redirecionado para o WhatsApp com os dados preenchidos no formulário.</p>
+      </form>
+
+      <div class="location-box">
+        <h3>Localização</h3>
+        <p>Toque no botão para abrir a rota no Google Maps.</p>
+        <a class="cta-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=Espa%C3%A7o%20B%C3%A1rbara%20Rodrigues%20Massoterapia%20%26%20SPA&travelmode=driving"
+          target="_blank" rel="noopener noreferrer">
+          Abrir rota no Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Espaço Bárbara Rodrigues Massoterapia &amp; SPA. Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#tecnicas">Técnicas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
