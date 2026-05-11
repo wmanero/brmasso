@@ -40,6 +40,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -47,6 +48,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -67,6 +69,8 @@ img {
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   box-shadow: var(--shadow);
 }
@@ -81,6 +85,7 @@ img {
   height: 50px;
   transform: scale(1.6);
   transform-origin: left center;
+  max-width: 100%;
 }
 
 .nav-menu ul {
@@ -324,8 +329,13 @@ img {
 
 /* ----- Responsive ----- */
 @media (max-width: 767px) {
+  * {
+    max-width: 100%;
+  }
+
   .container {
-    width: min(1200px, 94%);
+    width: 100%;
+    max-width: 100%;
     padding: 0.8rem;
   }
 
@@ -336,12 +346,14 @@ img {
   .header-inner {
     flex-direction: column;
     gap: 0.6rem;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .logo {
     height: 42px;
     transform: scale(1.2);
+    transform-origin: left center;
+    align-self: flex-start;
   }
 
   .nav-menu {
@@ -352,6 +364,7 @@ img {
     gap: 0.8rem;
     flex-wrap: wrap;
     justify-content: flex-start;
+    width: 100%;
   }
 
   .nav-menu a {
@@ -373,6 +386,14 @@ img {
 
   .carousel-item img {
     width: 88%;
+  }
+
+  .site-header,
+  .site-footer,
+  .hero,
+  .section,
+  .container {
+    overflow-x: clip;
   }
 
   .carousel-btn {
