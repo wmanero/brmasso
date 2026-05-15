@@ -59,8 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  if (carousel) {
-    const track = carousel.querySelector('.carousel-track');
+  const techCarousel = document.getElementById('techCarousel');
+  if (techCarousel) {
+    const track = techCarousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevBtn = techCarousel.querySelector('.carousel-btn.prev');
+    const nextBtn = techCarousel.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+    const moveToSlide = (index) => {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    };
+    prevBtn.addEventListener('click', () => { if (currentIndex > 0) moveToSlide(currentIndex - 1); });
+    nextBtn.addEventListener('click', () => { if (currentIndex < slides.length - 1) moveToSlide(currentIndex + 1); });
+    const autoPlayDelay = 3000;
+    let autoPlay = null;
+    const startAutoPlay = () => { if (autoPlay) return; autoPlay = setInterval(() => { const next = (currentIndex + 1) % slides.length; moveToSlide(next); }, autoPlayDelay); };
+    const stopAutoPlay = () => { if (!autoPlay) return; clearInterval(autoPlay); autoPlay = null; };
+    techCarousel.addEventListener('mouseenter', stopAutoPlay);
+    techCarousel.addEventListener('mouseleave', startAutoPlay);
+    startAutoPlay();
+  }
+
     const slides = Array.from(track.children);
     const prevBtn = carousel.querySelector('.carousel-btn.prev');
     const nextBtn = carousel.querySelector('.carousel-btn.next');
