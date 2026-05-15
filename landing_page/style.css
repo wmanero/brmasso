@@ -147,7 +147,7 @@ img {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, var(--color-primary), hsl(210, 70%, 45%));
+  background: linear-gradient(135deg, var(--color-primary), hsl(114, 71%, 18%));
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -163,15 +163,16 @@ img {
   background: linear-gradient(135deg, hsl(210, 70%, 50%), var(--color-primary-dark));
   transform: translateY(-2px);
 }
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: var(--radius);
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
+
+background: var(--color-primary);
+color: #fff;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: var(--radius);
+cursor: pointer;
+text-decoration: none;
+font-weight: 600;
+transition: var(--transition);
 }
 
 .cta-button:hover {
