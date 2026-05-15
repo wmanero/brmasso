@@ -8,16 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const tPrevBtn = testimonialCarousel.querySelector('.carousel-btn.prev');
     const tNextBtn = testimonialCarousel.querySelector('.carousel-btn.next');
     let tIndex = 0;
+    let autoInterval;
 
-    // Dados manuais para garantir que sempre apareça (Extraídos do Google Maps)
-    const reviews = [
-      { text: "Excelente profissional! Ambiente acolhedor e técnicas que realmente funcionam. Saí renovada.", author: "Maria Silva", stars: 5 },
-      { text: "O melhor Shiatsu da região. A Bárbara é muito atenciosa e entende exatamente o que o corpo precisa.", author: "João Pereira", stars: 5 },
-      { text: "Localização fácil e atendimento impecável. Faço drenagem linfática toda semana e os resultados são ótimos.", author: "Ana Costa", stars: 5 }
-    ];
+    async function loadReviews() {
+      try {
+        const response = await fetch('reviews.txt');
+        const data = await response.text();
+        const lines = data.split('\n').filter(line => line.trim() !== '');
 
-    function renderReviews() {
+        const parsedReviews = lines.map(line => {
+          const [author, stars, text] = line.split('|');
+          return { author, stars: parseInt(stars), text };
+        });
+
+        renderReviews(parsedReviews);
+      } catch (error) {
+        console.error("Erro ao carregar depoimentos:", error);
+        tTrack.innerHTML = '<p class="testimonial-text">Erro ao carregar avaliações.</p>';
+      }
+    }
+
+    function renderReviews(reviews) {
       tTrack.innerHTML = '';
+      if (reviews.length === 0) return;
+
       reviews.forEach(review => {
         const item = document.createElement('div');
         item.className = 'carousel-item testimonial-item';
