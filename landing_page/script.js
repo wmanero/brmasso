@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const lines = data.split('\n').filter(line => line.trim() !== '');
 
         const parsedReviews = lines.map(line => {
-          const [author, stars, text] = line.split('|');
+          const parts = line.split('|');
+          const [author, stars, text] = parts;
           return { author, stars: parseInt(stars), text };
         });
 
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderReviews(reviews) {
       tTrack.innerHTML = '';
-      if (reviews.length === 0) return;
+      if (!reviews || reviews.length === 0) return;
 
       reviews.forEach(review => {
         const item = document.createElement('div');
