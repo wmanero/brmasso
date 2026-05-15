@@ -85,13 +85,64 @@ img {
   justify-content: space-between;
 }
 
-.logo {
-  height: 160px;
-  transform: none;
-  transform-origin: left center;
-  max-width: 100%;
+/* ----- Header Contact Highlight ----- */
+.header-contact-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem 0;
 }
 
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.highlight-item svg {
+  color: var(--color-primary);
+}
+
+.highlight-item:hover {
+  color: var(--color-primary-dark);
+  transform: translateX(3px);
+}
+
+.highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(124, 77, 255, 0.3);
+  margin-top: 0.2rem;
+  width: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .header-contact-highlight {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .highlight-badge {
+    margin-top: 0;
+  }
+}
+
+/* Ajuste para alinhar o menu com os novos contatos */
 .nav-menu ul {
   list-style: none;
   display: flex;
@@ -448,11 +499,11 @@ img {
     align-items: stretch;
   }
 
-  .logo {
-    height: 110px;
-    transform: none;
-    transform-origin: left center;
+  .header-contact-highlight {
     align-self: flex-start;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.5rem;
   }
 
   .nav-menu {
