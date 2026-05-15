@@ -1,7 +1,63 @@
 // script.js - Carousel and WhatsApp scheduling behavior
 
 document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.getElementById('techCarousel');
+  // Testimonials carousel
+  const testimonialCarousel = document.getElementById('testimonialsCarousel');
+  if (testimonialCarousel) {
+    const tTrack = testimonialCarousel.querySelector('.carousel-track');
+    const tPrevBtn = testimonialCarousel.querySelector('.carousel-btn.prev');
+    const tNextBtn = testimonialCarousel.querySelector('.carousel-btn.next');
+    let tIndex = 0;
+
+    // Fetch reviews from your API endpoint (replace URL and PLACE_ID)
+    fetch('https://your-api.example.com/google-reviews?placeId=YOUR_PLACE_ID')
+      .then(res => res.json())
+      .then(data => {
+        // Expected: data.reviews = [{text, author_name, rating}, ...]
+        tTrack.innerHTML = '';
+        data.reviews.forEach(review => {
+          const item = document.createElement('div');
+          item.className = 'carousel-item testimonial-item';
+          item.innerHTML = `
+            <p class="testimonial-text">"${review.text}"</p>
+            <p class="testimonial-author">— ${review.author_name}</p>
+          `;
+          tTrack.appendChild(item);
+        });
+        initTestimonialCarousel();
+      })
+      .catch(() => {
+        // If fetch fails, keep the loading placeholder and still init carousel
+        initTestimonialCarousel();
+      });
+
+    function moveTestimonial(idx) {
+      tTrack.style.transform = `translateX(-${idx * 100}%)`;
+      tIndex = idx;
+      tPrevBtn.disabled = idx === 0;
+      tNextBtn.disabled = idx === tTrack.children.length - 1;
+    }
+
+    function initTestimonialCarousel() {
+      const slides = Array.from(tTrack.children);
+      moveTestimonial(0);
+      tPrevBtn.addEventListener('click', () => { if (tIndex > 0) moveTestimonial(tIndex - 1); });
+      tNextBtn.addEventListener('click', () => { if (tIndex < slides.length - 1) moveTestimonial(tIndex + 1); });
+      const autoDelay = 5000;
+      let auto = setInterval(() => {
+        const next = (tIndex + 1) % slides.length;
+        moveTestimonial(next);
+      }, autoDelay);
+      testimonialCarousel.addEventListener('mouseenter', () => clearInterval(auto));
+      testimonialCarousel.addEventListener('mouseleave', () => {
+        auto = setInterval(() => {
+          const next = (tIndex + 1) % slides.length;
+          moveTestimonial(next);
+        }, autoDelay);
+      });
+    }
+  }
+
 
   if (carousel) {
     const track = carousel.querySelector('.carousel-track');
