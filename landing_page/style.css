@@ -74,6 +74,11 @@ img {
   box-shadow: var(--shadow);
 }
 
+.site-header .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -81,8 +86,8 @@ img {
 }
 
 .logo {
-  height: 120px;
-  transform: scale(1.2);
+  height: 160px;
+  transform: none;
   transform-origin: left center;
   max-width: 100%;
 }
@@ -207,8 +212,9 @@ img {
 }
 
 .google-badge img {
-  width: 20px;
-  height: 20px;
+  height: 22px;
+  width: auto;
+  object-fit: contain;
 }
 
 .testimonial-card {
@@ -443,8 +449,8 @@ img {
   }
 
   .logo {
-    height: 90px;
-    transform: scale(1.1);
+    height: 110px;
+    transform: none;
     transform-origin: left center;
     align-self: flex-start;
   }

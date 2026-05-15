@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    renderReviews();
+    loadReviews();
   }
 
 
