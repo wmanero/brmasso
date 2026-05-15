@@ -209,12 +209,14 @@ img {
   background: #fff;
   padding: 2.5rem;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   text-align: left;
   margin: 1rem auto;
-  max-width: 80%;
+  width: 90%;
+  max-width: 600px;
   position: relative;
-  border-top: 4px solid #4285F4;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #4285F4;
   /* Azul Google */
 }
 
@@ -224,6 +226,29 @@ img {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   display: block;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  margin-top: 1rem;
+  color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial-author::before {
+  content: 'G';
+  /* Simula o ícone de perfil */
+  background: #4285F4;
+  color: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
 }
 
 /* ----- Carousel ----- */
