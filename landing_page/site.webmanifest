@@ -4,8 +4,8 @@
   "description": "Técnicas terapêuticas, ambiente relaxante e agenda online.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2f6fa8",
+  "background_color": "#f8f3f6",
+  "theme_color": "#4c2144",
   "icons": [
     {
       "src": "./img/logo/mini_logo.png",
