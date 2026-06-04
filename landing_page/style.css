@@ -1486,8 +1486,18 @@ body.service-drawer-open {
 }
 
 .contact-card-value {
+  display: block;
   font-weight: 600;
   color: var(--color-text);
+  line-height: 1.45;
+}
+
+.contact-card-hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-secondary);
 }
 
 .contact-form {

@@ -141,7 +141,7 @@ function initServicesCatalog() {
       btn.setAttribute('role', 'listitem');
       btn.dataset.serviceId = item.id;
       btn.innerHTML = `
-        <img class="service-tile__thumb" src="${item.img}" alt="" loading="lazy" width="110" height="110" />
+        <img class="service-tile__thumb" src="${item.img}" alt="${item.title}" loading="lazy" width="110" height="110" />
         <span class="service-tile__body">
           <span class="service-tile__name">${item.title}</span>
           <span class="service-tile__tagline">${item.tagline}</span>
