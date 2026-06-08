@@ -60,7 +60,7 @@ window.BR_SERVICES = {
       description:
         'Sessão expressa e eficiente, ideal para pausas no dia a dia. Concentra-se em pescoço, ombros e costas para alívio imediato sem comprometer a agenda.',
       benefits: ['Alívio rápido de tensões', 'Revigora entre compromissos', 'Melhora disposição', 'Prática para rotinas corridas'],
-      duration: '30 min',
+      duration: '15 - 30 min',
       price: null,
       img: './img/carrossel/post_quick.png',
     },
