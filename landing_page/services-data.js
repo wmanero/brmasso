@@ -19,11 +19,13 @@ window.BR_SERVICES = {
       label: 'Relaxamento',
       description: 'Experiências sensoriais que acalmam a mente e harmonizam corpo e espírito.',
     },
+    /**
     {
-      id: 'estetica',
-      label: 'Cuidados Estéticos',
+      id: 'relaxamento',
+      label: 'Alívio para os pés',
       description: 'Rituais de cuidado que valorizam seu bem-estar com toque refinado.',
     },
+    */
   ],
   items: [
     {
@@ -34,7 +36,7 @@ window.BR_SERVICES = {
       description:
         'Movimentos lentos e envolventes que induzem o relaxamento profundo, reduzindo o estresse acumulado e preparando corpo e mente para um estado de calma duradoura.',
       benefits: ['Reduz o estresse e a ansiedade', 'Melhora a qualidade do sono', 'Alivia tensões musculares leves', 'Promove sensação de leveza'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_relaxante.png',
     },
@@ -46,7 +48,7 @@ window.BR_SERVICES = {
       description:
         'Trabalho direcionado às regiões com dor ou rigidez, combinando pressões e técnicas adequadas ao seu quadro para restaurar conforto e mobilidade.',
       benefits: ['Alivia dores musculares', 'Reduz pontos de tensão', 'Melhora amplitude de movimento', 'Auxilia na recuperação pós-esforço'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_terapeutica.png',
     },
@@ -70,7 +72,7 @@ window.BR_SERVICES = {
       description:
         'Pedras vulcânicas aquecidas aplicadas com movimentos suaves, liberando calor terapêutico que relaxa músculos profundos e proporciona sensação envolvente de bem-estar.',
       benefits: ['Relaxamento muscular profundo', 'Estimula circulação', 'Alivia rigidez', 'Experiência sensorial única'],
-      duration: '75 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_pedras.png',
     },
@@ -82,7 +84,7 @@ window.BR_SERVICES = {
       description:
         'Técnica suave e ritmada que estimula o sistema linfático, favorecendo a eliminação de líquidos retidos e promovendo sensação de corpo mais leve e desinchado.',
       benefits: ['Reduz inchaço e retenção', 'Estimula circulação linfática', 'Auxilia na recuperação pós-cirúrgica*', 'Promove detoxificação natural'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_linfatica.png',
     },
@@ -94,7 +96,7 @@ window.BR_SERVICES = {
       description:
         'Origem japonesa: pressões nos meridianos energéticos do corpo com polegares e palmas, buscando restaurar o fluxo vital e o equilíbrio entre corpo e mente.',
       benefits: ['Harmoniza energia corporal', 'Alivia dores e fadiga', 'Melhora flexibilidade', 'Promove relaxamento profundo'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_shiatsu.png',
     },
@@ -106,7 +108,7 @@ window.BR_SERVICES = {
       description:
         'Trabalho na fáscia — tecido que envolve os músculos — para soltar aderências, melhorar postura e devolver amplitude de movimento com conforto progressivo.',
       benefits: ['Reduz rigidez e aderências', 'Melhora postura', 'Aumenta mobilidade', 'Alivia dores crônicas leves'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_miofascial.png',
     },
@@ -130,7 +132,7 @@ window.BR_SERVICES = {
       description:
         'Estimulação de pontos reflexos nos pés e mãos que correspondem a órgãos e sistemas do corpo, promovendo relaxamento integral e sensação de renovação.',
       benefits: ['Relaxamento profundo', 'Estimula funções corporais', 'Reduz estresse', 'Melhora qualidade do sono'],
-      duration: '45 min',
+      duration: '40 min',
       price: null,
       img: './img/carrossel/post_reflexologia.png',
     },
@@ -142,19 +144,19 @@ window.BR_SERVICES = {
       description:
         'Integra toque terapêutico e consciência corporal para liberar bloqueios emocionais e energéticos, favorecendo autoconhecimento e vitalidade.',
       benefits: ['Libera tensões emocionais', 'Aumenta disposição vital', 'Promove autoconhecimento', 'Harmoniza corpo e mente'],
-      duration: '60 min',
+      duration: '50 min',
       price: null,
       img: './img/carrossel/post_bioenergetica.png',
     },
     {
       id: 'spa-pes',
-      category: 'estetica',
+      category: 'relaxamento',
       title: 'SPA dos Pés',
       tagline: 'Ritual completo para seus pés',
       description:
-        'Experiência indulgente com esfoliação, hidratação e massagem nos pés — perfeita para quem busca cuidado estético, relaxamento e sensação de renovação.',
+        'Experiência indulgente com esfoliação, hidratação e massagem nos pés — perfeita para relaxamento e sensação de renovação.',
       benefits: ['Pés macios e hidratados', 'Relaxamento imediato', 'Melhora circulação local', 'Momento de autocuidado'],
-      duration: '45 min',
+      duration: '40 min',
       price: null,
       img: './img/carrossel/post_spa_pes.png',
     },
