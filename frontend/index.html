@@ -1,16 +1,501 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bárbara Rodrigues - Massoterapeuta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Espaço Bárbara Rodrigues | Massoterapia &amp; SPA em São Paulo</title>
+  <meta name="description"
+    content="Massoterapia e SPA no Jardim Marcelo, São Paulo. Shiatsu, drenagem linfática, reflexologia e mais. Atendimento personalizado com hora marcada. Agende pelo WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4c2144" />
+  <link rel="canonical" href="https://espacobarbararodrigues.com.br/" />
+
+  <meta property="og:title" content="Espaço Bárbara Rodrigues | Massoterapia &amp; SPA em São Paulo" />
+  <meta property="og:description"
+    content="Seu refúgio de bem-estar no Jardim Marcelo. Técnicas terapêuticas, ambiente acolhedor e atendimento com hora marcada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://espacobarbararodrigues.com.br/" />
+  <meta property="og:site_name" content="Espaço Bárbara Rodrigues" />
+  <meta property="og:image" content="https://espacobarbararodrigues.com.br/img/foto_espaco_01.jpeg" />
+  <meta property="og:image:alt" content="Ambiente acolhedor do Espaço Bárbara Rodrigues Massoterapia e SPA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Espaço Bárbara Rodrigues | Massoterapia &amp; SPA em São Paulo" />
+  <meta name="twitter:description"
+    content="Massoterapia terapêutica no Jardim Marcelo, São Paulo. Agende sua sessão em ambiente acolhedor." />
+  <meta name="twitter:image" content="https://espacobarbararodrigues.com.br/img/foto_espaco_01.jpeg" />
+
+  <link rel="icon" type="image/png" href="./img/logo/mini_logo.png" />
+  <link rel="apple-touch-icon" href="./img/logo/mini_logo.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preload" href="./img/foto_espaco_01.jpeg" as="image" />
+  <link rel="stylesheet" href="style.css?v=2" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+          "@id": "https://espacobarbararodrigues.com.br/#business",
+          "name": "Espaço Bárbara Rodrigues Massoterapia & SPA",
+          "description": "Massoterapia terapêutica e SPA com atendimento personalizado no Jardim Marcelo, São Paulo. Shiatsu, drenagem linfática, reflexologia, massagem relaxante e mais.",
+          "url": "https://espacobarbararodrigues.com.br/",
+          "image": "https://espacobarbararodrigues.com.br/img/foto_espaco_01.jpeg",
+          "telephone": "+55-11-99603-3110",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Paulino Nunes Esposo, 207",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "postalCode": "04890-000",
+            "addressCountry": "BR"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "São Paulo"
+          },
+          "sameAs": [
+            "https://www.instagram.com/b.r.massoterapia/"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "19",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de massoterapia e terapias corporais",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massagem Relaxante", "description": "Alivia o estresse e promove relaxamento profundo." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massagem Terapêutica", "description": "Foco em dores, tensões e desconfortos musculares." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quick Massage", "description": "Sessão rápida para quem tem pouco tempo." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pedras Quentes", "description": "Calor terapêutico para relaxar músculos profundamente." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drenagem Linfática", "description": "Reduz inchaço e estimula a circulação linfática." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shiatsu", "description": "Pressão em pontos de energia para equilíbrio corporal." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Liberação Miofascial", "description": "Trata aderências e rigidez da fáscia muscular." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quiroterapia", "description": "Técnicas manuais para alinhamento e alívio." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reflexologia", "description": "Estimula pontos reflexos nos pés e mãos." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bioenergética", "description": "Integra corpo, emoção e fluxo de energia." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SPA dos Pés", "description": "Cuidado completo e relaxante para os pés." } }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://espacobarbararodrigues.com.br/#website",
+          "url": "https://espacobarbararodrigues.com.br/",
+          "name": "Espaço Bárbara Rodrigues Massoterapia & SPA",
+          "description": "Site oficial do Espaço Bárbara Rodrigues — massoterapia e SPA em São Paulo.",
+          "inLanguage": "pt-BR",
+          "publisher": { "@id": "https://espacobarbararodrigues.com.br/#business" }
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Espaço Bárbara Rodrigues — Início">
+        <img src="./img/logo/logo_espaco_sem_fundo.png" alt="Espaço Bárbara Rodrigues" class="brand-logo" width="380"
+          height="96" />
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav"
+        aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="mainNav" aria-label="Navegação principal">
+        <div class="nav-menu__head">
+          <span class="nav-menu__title">Menu</span>
+        </div>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn-primary btn-sm nav-cta">Agendar sessão</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-bg" role="img" aria-label="Ambiente do espaço de massoterapia"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Massoterapia &amp; SPA · Atendimento personalizado</p>
+        <h1>Seu refúgio de<br /><em>bem-estar</em> e equilíbrio</h1>
+        <p class="hero-lead">
+          Técnicas terapêuticas em um ambiente acolhedor, com cuidado individualizado
+          para relaxar o corpo e acalmar a mente.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary">Agendar minha sessão</a>
+          <a href="#servicos" class="btn btn-outline-light">Conhecer os serviços</a>
+        </div>
+        <ul class="hero-trust" aria-label="Diferenciais">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <span>Profissional certificada</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <span>Agendamento com hora marcada</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <span>Ambiente acolhedor</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pilares -->
+    <section class="pillars" aria-label="Nossos pilares">
+      <div class="container pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">01</div>
+          <h3>Escuta atenta</h3>
+          <p>Cada sessão é planejada de acordo com suas necessidades e objetivos de bem-estar.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">02</div>
+          <h3>Técnicas diversas</h3>
+          <p>Do relaxamento ao alívio de tensões, com abordagens terapêuticas reconhecidas.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon" aria-hidden="true">03</div>
+          <h3>Experiência completa</h3>
+          <p>Ambiente tranquilo, aromas suaves e cuidado em cada detalhe do atendimento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Serviços / Técnicas -->
+    <section id="servicos" class="section section-alt services-section" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="services-intro">
+          <p class="eyebrow">Nossos serviços</p>
+          <h2 id="servicos-title">Experiências pensadas para o seu <br>bem-estar</h2>
+          <p class="services-intro__lead">
+            Onze modalidades organizadas em quatro caminhos de cuidado. Explore por categoria e descubra a técnica
+            ideal para o seu momento — com atendimento personalizado em ambiente acolhedor.
+          </p>
+          <ul class="services-intro__meta" aria-label="Resumo do catálogo">
+            <li><span class="services-intro__meta-value">11</span> modalidades</li>
+            <li><span class="services-intro__meta-value">3</span> categorias</li>
+            <li><span class="services-intro__meta-value">100%</span> personalizado</li>
+          </ul>
+        </header>
+
+        <nav class="services-tabs" id="servicesTabs" aria-label="Categorias de serviços"></nav>
+
+        <div class="services-panel" id="servicesPanel">
+          <header class="services-panel__head">
+            <h3 class="services-panel__title" id="servicesCategoryTitle"></h3>
+            <p class="services-panel__desc" id="servicesCategoryDesc"></p>
+          </header>
+          <div class="services-cards" id="servicesCards" role="list"></div>
+        </div>
+
+        <p class="services-footnote">
+          Valores e pacotes sob consulta. Entre em contato para montar o plano ideal para você.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="./img/imagem_barbara.png" alt="Bárbara Rodrigues, massoterapeuta" class="about-img"
+            loading="lazy" width="400" height="500" />
+          <div class="about-badge">
+            <strong>Bárbara Rodrigues</strong>
+            <span>Massoterapeuta &amp; terapeuta corporal</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Sobre a profissional</p>
+          <h2>Cuidado que transforma o seu dia</h2>
+          <p>
+            Bárbara Rodrigues é especialista em terapias corporais que promovem equilíbrio
+            físico e emocional. Com formação em técnicas como Shiatsu, Reflexologia e
+            Drenagem Linfática, ela personaliza cada sessão conforme as necessidades de cada cliente.
+          </p>
+          <p>
+            No Espaço Bárbara Rodrigues, o atendimento vai além da massagem: é um momento
+            de pausa, acolhimento e reconexão com o corpo — em um ambiente pensado para
+            proporcionar tranquilidade do início ao fim.
+          </p>
+          <ul class="about-list">
+            <li>Atendimento individual e personalizado</li>
+            <li>Ambiente reservado e acolhedor</li>
+            <li>Diversas técnicas terapêuticas</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary">Falar com a Bárbara</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agenda CTA -->
+    <section id="agenda" class="section cta-banner">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <p class="eyebrow eyebrow-light">Reserve seu horário</p>
+          <h2>Você merece uma pausa</h2>
+          <p>Atendemos com hora marcada. Garanta seu momento de autocuidado e relaxamento.</p>
+          <a href="#contato" class="btn btn-light">Garantir meu horário</a>
+        </div>
+        <div class="cta-banner-media">
+          <img src="./img/imagem_agenda.png" alt="Agenda de atendimentos" loading="lazy" width="480" height="320" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section section-alt testimonials-section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Depoimentos</p>
+          <h2>O que nossos clientes dizem</h2>
+          <div class="google-badge">
+            <img src="./img/logo_G.png" alt="" width="22" height="22" aria-hidden="true" />
+            <span>Avaliações no Google Maps</span>
+          </div>
+        </header>
+
+        <div class="carousel carousel-testimonials" id="testimonialsCarousel" aria-label="Depoimentos de clientes">
+          <button class="carousel-btn prev" type="button" aria-label="Depoimento anterior">&#8249;</button>
+          <div class="carousel-testimonials__viewport">
+            <div class="carousel-track" id="testimonialsTrack">
+              <div class="carousel-item">
+                <p class="testimonial-loading">Carregando avaliações...</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn next" type="button" aria-label="Próximo depoimento">&#8250;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Contato</p>
+          <h2>Agende sua sessão</h2>
+          <p class="section-desc">
+            Preencha o formulário e envie sua mensagem diretamente pelo WhatsApp.
+            Responderemos o mais breve possível.
+          </p>
+
+          <ul class="contact-cards">
+            <li>
+              <a href="https://wa.me/5511996033110" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <span class="contact-card-label">WhatsApp</span>
+                <span class="contact-card-value">(11) 99603-3110</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/b.r.massoterapia/" target="_blank" rel="noopener noreferrer"
+                class="contact-card">
+                <span class="contact-card-label">Instagram</span>
+                <span class="contact-card-value">@b.r.massoterapia</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-card"
+                href="https://l1nk.dev/vnb1zyb"
+                target="_blank" rel="noopener noreferrer">
+                <span class="contact-card-label">Endereço</span>
+                <span class="contact-card-value">
+                  Novo local: Rua Nossa Senhora de Nazaré, 32 - Cidade Dutra - Interlagos
+                </span>
+                <span class="contact-card-hint">Abrir rota no Google Maps →</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="whatsappForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome" />
+            </div>
+            <div class="form-group">
+              <label for="telefone">WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" required
+                placeholder="(11) 99999-9999" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tecnica">Técnica de interesse</label>
+            <select id="tecnica" name="tecnica" required>
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="Massagem Relaxante">Massagem Relaxante</option>
+              <option value="Massagem Terapêutica">Massagem Terapêutica</option>
+              <option value="Drenagem Linfática">Drenagem Linfática</option>
+              <option value="Shiatsu">Shiatsu</option>
+              <option value="Reflexologia">Reflexologia</option>
+              <option value="Pedras Quentes">Pedras Quentes</option>
+              <option value="Liberação Miofascial">Liberação Miofascial</option>
+              <option value="Bioenergética">Bioenergética</option>
+              <option value="Quiroterapia">Quiroterapia</option>
+              <option value="Quick Massage">Quick Massage</option>
+              <option value="SPA dos Pés">SPA dos Pés</option>
+              <option value="Preciso de Indicação">Preciso de indicação</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required
+              placeholder="Conte brevemente seu objetivo ou o melhor horário para atendimento."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Enviar via WhatsApp
+          </button>
+          <p class="form-help">Você será redirecionado para o WhatsApp com os dados preenchidos.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="./img/logo/logo_espaco_sem_fundo.png" alt="Espaço Bárbara Rodrigues" class="footer-logo" width="360"
+          height="96" />
+        <p>Massoterapia &amp; SPA · Cuidado corporal com excelência e acolhimento.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/b.r.massoterapia/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram @b.r.massoterapia">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/5511996033110" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Espaço Bárbara Rodrigues Massoterapia &amp; SPA. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="service-drawer" id="serviceDrawer" hidden>
+    <div class="service-drawer__backdrop" data-drawer-close aria-hidden="true"></div>
+    <aside
+      class="service-drawer__panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="serviceDrawerTitle"
+      tabindex="-1"
+    >
+      <header class="service-drawer__header">
+        <div class="service-drawer__toolbar">
+          <button type="button" class="service-drawer__close" data-drawer-close aria-label="Fechar detalhes">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="service-drawer__hero">
+          <img class="service-drawer__img" id="serviceDrawerImg" src="" alt="" />
+        </div>
+      </header>
+      <div class="service-drawer__body">
+        <p class="service-drawer__tagline" id="serviceDrawerTagline"></p>
+        <h3 class="service-drawer__title" id="serviceDrawerTitle"></h3>
+        <p class="service-drawer__text" id="serviceDrawerDesc"></p>
+
+        <div class="service-drawer__meta">
+          <div class="service-drawer__meta-item">
+            <span class="service-drawer__meta-label">Duração</span>
+            <span class="service-drawer__meta-value" id="serviceDrawerDuration"></span>
+          </div>
+          <div class="service-drawer__meta-item" id="serviceDrawerPriceWrap" hidden>
+            <span class="service-drawer__meta-label">Investimento</span>
+            <span class="service-drawer__meta-value" id="serviceDrawerPrice"></span>
+          </div>
+        </div>
+
+        <div class="service-drawer__benefits">
+          <h4>Benefícios</h4>
+          <ul id="serviceDrawerBenefits"></ul>
+        </div>
+
+        <a href="#contato" class="btn btn-primary btn-block service-drawer__cta" id="serviceDrawerCta">
+          Agendar sessão
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <a href="https://wa.me/5511996033110" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="reviews-data.js?v=2"></script>
+  <script src="services-data.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 
 </html>

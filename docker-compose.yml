@@ -24,16 +24,28 @@ services:
     ports:
       - "8000:8000"
 
-  frontend:
-    build:
-      context: ./frontend
+
+  nginx:
+    image: nginx:1.27-alpine
     restart: unless-stopped
-    environment:
-      VITE_API_URL: http://localhost:8000/api/v1
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /var/lib/docker/volumes/infra_certbot_www/_data:/var/www/certbot
+      - ./frontend:/usr/share/nginx/html:ro # <--- LINHA ADICIONADA DA LANDPAGE
     depends_on:
       - backend
-    ports:
-      - "4173:4173"
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/docker/volumes/infra_certbot_www/_data:/var/www/certbot
 
 volumes:
   postgres_data:
+  infra_certbot_www:
+    external: true

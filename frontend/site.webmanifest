@@ -1,0 +1,21 @@
+{
+  "name": "Espaço Bárbara Rodrigues Massoterapia & SPA",
+  "short_name": "Bárbara SPA",
+  "description": "Técnicas terapêuticas, ambiente relaxante e agenda online.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f3f6",
+  "theme_color": "#4c2144",
+  "icons": [
+    {
+      "src": "./img/logo/mini_logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo/mini_logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
