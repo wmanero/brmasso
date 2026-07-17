@@ -94,5 +94,40 @@ window.BR_REVIEWS = [
     "author": "Leticia Arruda",
     "stars": 5,
     "text": "Fiz uma massagem relaxante com a Bárbara e foi uma experiência maravilhosa! O ambiente estava super acolhedor, luz de velas, música tranquila e som de passarinhos, além da venda quente nos olhos, que deixou tudo ainda mais relaxante. Na noite em que fiz a massagem, dormi igual um bebê. A Bárbara tem mãos de fada e transmite muito cuidado em cada detalhe. Recomendo demais!"
+  },
+  {
+    "author": "Kelly Cristina dos Santos Lima Oliveira",
+    "stars": 5,
+    "text": "Fiz uma massagem, e realmente adorei! Voltarei com certeza!"
+  },
+  {
+    "author": "Karla Lima",
+    "stars": 5,
+    "text": "Profissional maravilhosa, local organizado e bem limpinho. Realmente um local que não temos mais vontade de sair."
+  },
+  {
+    "author": "Bruna Miranda",
+    "stars": 5,
+    "text": "Foi muito boa, consegui relaxar, me desconectar do restante, além de auxiliar nas dores que estava no momento! A Barbara super atenciosa com mãos de fada."
+  },
+  {
+    "author": "MAGALI APARECIDA MIYAMOTO",
+    "stars": 5,
+    "text": "Experiência maravilhosa! A Bárbara é uma profissional atenciosa e excelente. O ambiente é lindo e acolhedor."
+  },
+  {
+    "author": "Harleen Quinnzel",
+    "stars": 5,
+    "text": "Tudo maravilhoso, super recomendo! 🙏🏽❤️✨"
+  },
+  {
+    "author": "Maisa Santos",
+    "stars": 5,
+    "text": "Achei o atendimento da Bárbara, incrível! Estava super tensa e com dor na nuca e pescoço e sai de lá leve! Ainda fui mimada com um kit de boas vindas super fofo 🥰"
+  },
+  {
+    "author": "Rosemary Santos",
+    "stars": 5,
+    "text": "Ótimo preço! Quero registrar minha profunda gratidão pelo atendimento que recebi. Estava há três dias enfrentando uma crise de fibromialgia e, após a massagem, consegui dormir sem precisar de medicação. Acordei renovada, com o corpo mais leve e a mente em paz. Não foi apenas uma massagem. Foi um cuidado que alcançou além da dor física: um verdadeiro acalanto para a alma e um respiro para a mente. Desejo, de coração, que muitas pessoas se permitam viver essa experiência. Tenho certeza de que sairão transformadas pelo cuidado, pela sensibilidade e pelo profissionalismo de suas mãos. Minha sincera gratidão."
   }
 ];
