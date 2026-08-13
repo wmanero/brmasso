@@ -1235,6 +1235,58 @@ body.service-drawer-open {
   background: var(--color-primary);
 }
 
+/* Nossa equipe */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.team-member {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-member__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team-member__info {
+  padding: 1rem 1rem 1.15rem;
+  text-align: center;
+}
+
+.team-member__info strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.team-member__info span {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
 /* CTA Banner */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
@@ -1700,6 +1752,14 @@ body.service-drawer-open {
   .about-media {
     max-width: 360px;
     margin: 0 auto;
+  }
+
+  /* Nossa equipe — uma pessoa por linha em telas menores */
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    width: 100%;
+    margin-inline: auto;
   }
 
   .cta-banner-media img {
