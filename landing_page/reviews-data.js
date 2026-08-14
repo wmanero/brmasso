@@ -129,5 +129,41 @@ window.BR_REVIEWS = [
     "author": "Rosemary Santos",
     "stars": 5,
     "text": "Ótimo preço! Quero registrar minha profunda gratidão pelo atendimento que recebi. Estava há três dias enfrentando uma crise de fibromialgia e, após a massagem, consegui dormir sem precisar de medicação. Acordei renovada, com o corpo mais leve e a mente em paz. Não foi apenas uma massagem. Foi um cuidado que alcançou além da dor física: um verdadeiro acalanto para a alma e um respiro para a mente. Desejo, de coração, que muitas pessoas se permitam viver essa experiência. Tenho certeza de que sairão transformadas pelo cuidado, pela sensibilidade e pelo profissionalismo de suas mãos. Minha sincera gratidão."
+  },
+  {
+    "author": "Aparecida Henrique da Silva",
+    "stars": 5,
+    "text": "Maravilhoso 👏🏻"
+  },
+  {
+    "author": "Ana Caroline Helfstein",
+    "stars": 5,
+    "text": "Experiência incrível!\nFiz uma massagem e foi extremamente renovadora, me trouxe uma sensação de leveza e bem-estar. O atendimento foi muito cuidadoso, acolhedor e feito com muito profissionalismo. Dá para perceber o carinho e a dedicação em cada detalhe. Recomendo de olhos fechados!❤️\nBárbara você é maravilhosa ❤️❤️❤️"
+  },
+  {
+    "author": "Elis Carla",
+    "stars": 5,
+    "text": "Ótima profissional. Super recomendo 👏🏼👏🏼"
+  },
+  {
+    "author": "GENILZA CARNEIRO OLIVEIRA",
+    "stars": 5,
+    "text": "Foi uma experiência incrível.\nA Bárbara é extremamente atenciosa e cuidadosa.\nO ambiente é bastante acolhedor e confortável."
+  },
+  {
+    "author": "Carolina Morais",
+    "stars": 5,
+    "text": "Ótimo preço\nRecomendo para todos que possamos ter momento de cuidado e bem estar...excelente profissional."
+  },
+  {
+    "author": "Alice Alves",
+    "stars": 5,
+    "text": "Ótimo preço\nEspaço lindo e agradável, a massagista muito atenciosa. Gostei muito e indico."
+  },
+  {
+    "author": "Deufranio Barbosa de Carvalho",
+    "stars": 5,
+    "text": "Ótimo preço\nEspaço limpo e agradável"
   }
+
 ];
