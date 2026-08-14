@@ -58,6 +58,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.phone-separator {
+  display: inline-block;
+  margin: 0 0.35rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
 img {
   max-width: 100%;
   height: auto;
