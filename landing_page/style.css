@@ -1326,6 +1326,73 @@ body.service-drawer-open {
   margin-left: auto;
 }
 
+  /* Cuidado responsável */
+.responsible-care-section {
+  background: #f8f5f8;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.responsible-care-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 42px 48px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid rgba(76, 33, 68, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(76, 33, 68, 0.06);
+}
+
+.responsible-care-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #4c2144;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.responsible-care-content .eyebrow {
+  margin-bottom: 8px;
+}
+
+.responsible-care-content h2 {
+  margin-bottom: 20px;
+}
+
+.responsible-care-content p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.responsible-care-content p:last-child {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .responsible-care-card {
+    padding: 30px 24px;
+    gap: 18px;
+  }
+
+  .responsible-care-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+}
+
 /* Testimonials */
 .google-badge {
   display: inline-flex;
@@ -2100,70 +2167,5 @@ body.service-drawer-open {
     max-width: 80vw;
   }
 
-  /* Cuidado responsável */
-.responsible-care-section {
-  background: #f8f5f8;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.responsible-care-card {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 42px 48px;
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-  background: #fff;
-  border: 1px solid rgba(76, 33, 68, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(76, 33, 68, 0.06);
-}
-
-.responsible-care-icon {
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #4c2144;
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.responsible-care-content .eyebrow {
-  margin-bottom: 8px;
-}
-
-.responsible-care-content h2 {
-  margin-bottom: 20px;
-}
-
-.responsible-care-content p {
-  margin-bottom: 14px;
-  line-height: 1.7;
-}
-
-.responsible-care-content p:last-child {
-  margin-bottom: 0;
-  font-size: 0.92rem;
-  opacity: 0.85;
-}
-
-@media (max-width: 700px) {
-  .responsible-care-card {
-    padding: 30px 24px;
-    gap: 18px;
-  }
-
-  .responsible-care-icon {
-    flex-basis: 36px;
-    width: 36px;
-    height: 36px;
-    font-size: 17px;
-  }
-}
+  
 }
