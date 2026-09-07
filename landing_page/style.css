@@ -1292,6 +1292,7 @@ body.service-drawer-open {
   font-size: 0.82rem;
   line-height: 1.4;
   color: var(--color-text-muted);
+  min-height: calc(2 * 1.4em);
 }
 
 /* CTA Banner */
