@@ -164,6 +164,21 @@ window.BR_REVIEWS = [
     "author": "Deufranio Barbosa de Carvalho",
     "stars": 5,
     "text": "Ótimo preço\nEspaço limpo e agradável"
+  },
+  {
+    "author": "Maria Elizabeth",
+    "stars": 5,
+    "text": "Ótimo preço\nGostei do espaço acolhedor e da atenção da Bárbara, a massoterapeuta que nos atende com todo carinho. Minha experiência com a massagem relaxante foi ótima e voltarei com certeza."
+  },
+  {
+    "author": "Jefte Leme",
+    "stars": 5,
+    "text": "Muito bom, preciso de mais sessões"
+  },
+  {
+    "author": "Cauê Lima de Araújo",
+    "stars": 5,
+    "text": "Fui atendido pelo Massoterapeuta Welton, muito atencioso e profissional nas técnicas aplicadas. Sai de lá renovado !"
   }
 
 ];
