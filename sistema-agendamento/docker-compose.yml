@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-br_agendamento}
+      POSTGRES_USER: ${POSTGRES_USER:-brmasso}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-brmasso123}
+    ports:
+      - "5433:5432"
+    volumes:
+      - agendamento_postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-brmasso}:${POSTGRES_PASSWORD:-brmasso123}@postgres:5432/${POSTGRES_DB:-br_agendamento}
+    depends_on:
+      - postgres
+    ports:
+      - "8001:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8081:80"
+
+volumes:
+  agendamento_postgres_data:
