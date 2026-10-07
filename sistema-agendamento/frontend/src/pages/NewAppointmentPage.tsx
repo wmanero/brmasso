@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { api, ApiError } from '../lib/api'
-import { datetimeLocalFieldToApi, toIsoLocal } from '../lib/datetime'
+import { AppointmentDateTimeFields } from '../components/AppointmentDateTimeFields'
+import { ServiceSelect } from '../components/ServiceSelect'
+import { DEFAULT_SERVICE_TITLE } from '../data/services'
+import { datetimeLocalFieldToApi, defaultAppointmentStart } from '../lib/datetime'
 import type { AppointmentStatus, Client, User } from '../types'
 
 export function NewAppointmentPage() {
@@ -15,8 +18,8 @@ export function NewAppointmentPage() {
   const [form, setForm] = useState({
     client_id: '',
     therapist_id: '',
-    service_name: 'Massagem',
-    starts_at: toIsoLocal(new Date()),
+    service_name: DEFAULT_SERVICE_TITLE,
+    starts_at: defaultAppointmentStart(),
     duration_minutes: '60',
     status: 'scheduled' as AppointmentStatus,
     notes: '',
@@ -64,7 +67,7 @@ export function NewAppointmentPage() {
 
       <form
         onSubmit={handleSubmit}
-        className="grid grid-cols-1 gap-4 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm lg:max-w-4xl lg:grid-cols-2 lg:gap-6 lg:p-8"
+        className="grid grid-cols-1 gap-4 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:grid-cols-2 lg:max-w-4xl lg:gap-6 lg:p-8"
       >
         <label className="block text-sm">
           Cliente
@@ -72,7 +75,7 @@ export function NewAppointmentPage() {
             required
             value={form.client_id}
             onChange={(e) => setForm((f) => ({ ...f, client_id: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-3 text-base"
+            className="field-select mt-1"
           >
             <option value="">Selecione</option>
             {clients.map((c) => (
@@ -89,7 +92,7 @@ export function NewAppointmentPage() {
             required
             value={form.therapist_id}
             onChange={(e) => setForm((f) => ({ ...f, therapist_id: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-3 text-base"
+            className="field-select mt-1"
           >
             {therapists.map((t) => (
               <option key={t.id} value={t.id}>
@@ -99,24 +102,23 @@ export function NewAppointmentPage() {
           </select>
         </label>
 
-        <label className="block text-sm">
-          Servico
-          <input
-            required
-            value={form.service_name}
-            onChange={(e) => setForm((f) => ({ ...f, service_name: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-3 text-base"
-          />
-        </label>
+        <AppointmentDateTimeFields
+          value={form.starts_at}
+          onChange={(starts_at) => setForm((f) => ({ ...f, starts_at }))}
+        />
 
         <label className="block text-sm">
-          Data e hora
-          <input
-            type="datetime-local"
+          Servico
+          <ServiceSelect
             required
-            value={form.starts_at}
-            onChange={(e) => setForm((f) => ({ ...f, starts_at: e.target.value }))}
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-3 text-base"
+            value={form.service_name}
+            onChange={(title, duration) =>
+              setForm((f) => ({
+                ...f,
+                service_name: title,
+                ...(duration ? { duration_minutes: String(duration) } : {}),
+              }))
+            }
           />
         </label>
 
@@ -134,7 +136,7 @@ export function NewAppointmentPage() {
           />
         </label>
 
-        <label className="block text-sm lg:col-span-2">
+        <label className="block text-sm sm:col-span-2">
           Observacoes
           <textarea
             rows={2}
@@ -145,14 +147,14 @@ export function NewAppointmentPage() {
         </label>
 
         {error ? (
-          <p className="text-sm text-red-600 lg:col-span-2">
+          <p className="text-sm text-red-600 sm:col-span-2">
             {error}
           </p>
         ) : null}
 
         <button
           type="submit"
-          className="w-full rounded-xl bg-violet-700 py-3 text-base font-semibold text-white lg:col-span-2 lg:max-w-sm"
+          className="w-full rounded-xl bg-violet-700 py-3 text-base font-semibold text-white sm:col-span-2 lg:max-w-sm"
         >
           Confirmar agendamento
         </button>

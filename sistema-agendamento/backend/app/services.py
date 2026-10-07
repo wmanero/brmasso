@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session, joinedload
 
 from app.core.config import get_settings
@@ -13,6 +13,14 @@ from app.schemas import AppointmentRead
 
 
 def ensure_seed_users(db: Session) -> None:
+    """Cria as duas contas iniciais somente se o banco ainda nao tiver usuarios.
+
+    Depois disso, login, agenda e profissionais vêm exclusivamente da tabela `users`.
+    """
+    total = db.scalar(select(func.count()).select_from(User)) or 0
+    if total > 0:
+        return
+
     settings = get_settings()
     seed = [
         (
@@ -29,22 +37,15 @@ def ensure_seed_users(db: Session) -> None:
         ),
     ]
     for email, password, name, color in seed:
-        existing = db.scalar(select(User).where(User.email == email))
-        hashed = get_password_hash(password)
-        if existing is None:
-            db.add(
-                User(
-                    email=email,
-                    full_name=name,
-                    hashed_password=hashed,
-                    role=UserRole.therapist,
-                    calendar_color=color,
-                )
+        db.add(
+            User(
+                email=email,
+                full_name=name,
+                hashed_password=get_password_hash(password),
+                role=UserRole.therapist,
+                calendar_color=color,
             )
-            continue
-        existing.full_name = name
-        existing.calendar_color = color
-        existing.is_active = True
+        )
     db.commit()
 
 

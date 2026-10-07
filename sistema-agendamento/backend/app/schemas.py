@@ -29,6 +29,11 @@ class UserRead(BaseModel):
     calendar_color: str
 
 
+class UserProfileUpdate(BaseModel):
+    full_name: str = Field(min_length=2, max_length=120)
+    calendar_color: str = Field(min_length=7, max_length=7, pattern=r"^#[0-9A-Fa-f]{6}$")
+
+
 class ClientCreate(BaseModel):
     full_name: str = Field(min_length=2, max_length=120)
     phone: str = Field(min_length=8, max_length=30)

@@ -45,6 +45,9 @@ export const api = {
   me(token: string) {
     return request<User>('/auth/me', {}, token)
   },
+  updateProfile(token: string, payload: Pick<User, 'full_name' | 'calendar_color'>) {
+    return request<User>('/auth/me', { method: 'PATCH', body: JSON.stringify(payload) }, token)
+  },
   therapists(token: string) {
     return request<User[]>('/therapists', {}, token)
   },

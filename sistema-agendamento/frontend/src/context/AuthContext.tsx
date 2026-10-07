@@ -10,6 +10,8 @@ type AuthContextValue = {
   loading: boolean
   login: (email: string, password: string) => Promise<void>
   logout: () => void
+  refreshUser: () => Promise<void>
+  setUserProfile: (user: User) => void
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -59,9 +61,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null)
   }, [])
 
+  const refreshUser = useCallback(async () => {
+    if (!token) return
+    const profile = await api.me(token)
+    setUser(profile)
+  }, [token])
+
+  const setUserProfile = useCallback((profile: User) => {
+    setUser(profile)
+  }, [])
+
   const value = useMemo(
-    () => ({ token, user, loading, login, logout }),
-    [token, user, loading, login, logout],
+    () => ({ token, user, loading, login, logout, refreshUser, setUserProfile }),
+    [token, user, loading, login, logout, refreshUser, setUserProfile],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

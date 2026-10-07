@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { api, ApiError } from '../lib/api'
 import { statusBadgeClass, statusLabel } from '../lib/appointmentStatus'
+import { AppointmentDateTimeFields } from './AppointmentDateTimeFields'
+import { normalizeServiceName, ServiceSelect } from './ServiceSelect'
 import { datetimeLocalFieldToApi, formatDateTime, toDatetimeLocalField } from '../lib/datetime'
 import type { Anamnesis, Appointment, AppointmentStatus, Client, User } from '../types'
 
@@ -24,7 +26,7 @@ export function AppointmentDetailSheet({ appointment, onClose, onUpdated }: Prop
   const [form, setForm] = useState({
     client_id: String(appointment.client_id),
     therapist_id: String(appointment.therapist_id),
-    service_name: appointment.service_name,
+    service_name: normalizeServiceName(appointment.service_name),
     starts_at: toDatetimeLocalField(appointment.starts_at),
     duration_minutes: String(appointment.duration_minutes),
     status: appointment.status,
@@ -147,14 +149,14 @@ export function AppointmentDetailSheet({ appointment, onClose, onUpdated }: Prop
               )}
             </div>
           ) : (
-            <form id="edit-appointment-form" onSubmit={handleSave} className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-              <label className="block text-sm lg:col-span-2">
+            <form id="edit-appointment-form" onSubmit={handleSave} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <label className="block text-sm">
                 Cliente
                 <select
                   required
                   value={form.client_id}
                   onChange={(e) => setForm((f) => ({ ...f, client_id: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
+                  className="field-select mt-1 py-2"
                 >
                   {clients.map((c) => (
                     <option key={c.id} value={c.id}>
@@ -169,7 +171,7 @@ export function AppointmentDetailSheet({ appointment, onClose, onUpdated }: Prop
                   required
                   value={form.therapist_id}
                   onChange={(e) => setForm((f) => ({ ...f, therapist_id: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
+                  className="field-select mt-1 py-2"
                 >
                   {therapists.map((t) => (
                     <option key={t.id} value={t.id}>
@@ -178,36 +180,24 @@ export function AppointmentDetailSheet({ appointment, onClose, onUpdated }: Prop
                   ))}
                 </select>
               </label>
+              <AppointmentDateTimeFields
+                value={form.starts_at}
+                onChange={(starts_at) => setForm((f) => ({ ...f, starts_at }))}
+              />
               <label className="block text-sm">
-                Status
-                <select
-                  value={form.status}
-                  onChange={(e) => setForm((f) => ({ ...f, status: e.target.value as AppointmentStatus }))}
-                  className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
-                >
-                  <option value="scheduled">Agendado</option>
-                  <option value="confirmed">Confirmado</option>
-                  <option value="completed">Realizado</option>
-                  <option value="cancelled">Cancelado</option>
-                </select>
-              </label>
-              <label className="block text-sm lg:col-span-2">
                 Servico
-                <input
+                <ServiceSelect
                   required
+                  allowLegacy
                   value={form.service_name}
-                  onChange={(e) => setForm((f) => ({ ...f, service_name: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
-                />
-              </label>
-              <label className="block text-sm">
-                Data e hora
-                <input
-                  type="datetime-local"
-                  required
-                  value={form.starts_at}
-                  onChange={(e) => setForm((f) => ({ ...f, starts_at: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
+                  className="field-select mt-1 py-2"
+                  onChange={(title, duration) =>
+                    setForm((f) => ({
+                      ...f,
+                      service_name: title,
+                      ...(duration ? { duration_minutes: String(duration) } : {}),
+                    }))
+                  }
                 />
               </label>
               <label className="block text-sm">
@@ -223,7 +213,20 @@ export function AppointmentDetailSheet({ appointment, onClose, onUpdated }: Prop
                   className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2"
                 />
               </label>
-              <label className="block text-sm lg:col-span-2">
+              <label className="block text-sm">
+                Status
+                <select
+                  value={form.status}
+                  onChange={(e) => setForm((f) => ({ ...f, status: e.target.value as AppointmentStatus }))}
+                  className="field-select mt-1 py-2"
+                >
+                  <option value="scheduled">Agendado</option>
+                  <option value="confirmed">Confirmado</option>
+                  <option value="completed">Realizado</option>
+                  <option value="cancelled">Cancelado</option>
+                </select>
+              </label>
+              <label className="block text-sm sm:col-span-2">
                 Observacoes
                 <textarea
                   rows={2}

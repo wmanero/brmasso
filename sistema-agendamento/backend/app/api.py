@@ -20,6 +20,7 @@ from app.schemas import (
     ClientRead,
     LoginRequest,
     Token,
+    UserProfileUpdate,
     UserRead,
 )
 from app.services import find_therapist_conflict, list_appointments_in_range, serialize_appointment
@@ -45,6 +46,22 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)) -> Token:
 @router.get("/auth/me", response_model=UserRead)
 def me(current_user: User = Depends(get_current_user)) -> User:
     return current_user
+
+
+@router.patch("/auth/me", response_model=UserRead)
+def update_profile(
+    payload: UserProfileUpdate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> User:
+    user = db.get(User, current_user.id)
+    if user is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Usuario nao encontrado")
+    user.full_name = payload.full_name.strip()
+    user.calendar_color = payload.calendar_color
+    db.commit()
+    db.refresh(user)
+    return user
 
 
 @router.post("/auth/change-password", status_code=status.HTTP_204_NO_CONTENT)

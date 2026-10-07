@@ -70,7 +70,7 @@ npm run dev
 
 Abra http://localhost:5173 — o Vite encaminha `/api` para a API na porta 8000.
 
-Usuárias seed: e-mails e senhas em `THERAPIST_1_*` e `THERAPIST_2_*` no `.env` (apenas na **primeira criação**). Depois, use **Conta → alterar senha** no app; reiniciar a API nao reseta a senha.
+**Massoterapeutas:** em runtime tudo vem do **banco** (`/therapists`, login, cores na agenda). O `.env` (`THERAPIST_1_*`, `THERAPIST_2_*`) só serve no **bootstrap** — primeira subida com tabela `users` vazia. Depois disso, use **Conta → Meu perfil** (nome e cor) e **Alterar senha**.
 
 ## Docker Compose
 
