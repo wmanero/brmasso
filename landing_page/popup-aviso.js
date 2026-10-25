@@ -14,7 +14,7 @@ const BR_POPUP_CONFIG = {
   titulo: "Aviso importante",
 
   mensagem:
-    "Olá! Temos um comunicado importante para você. Confira as informações antes de continuar. Nos dias 30/10 a 02/11/2026, não teremos agenda disponível. Agradecemos sua compreensão.",
+    "Olá! Temos um comunicado importante para você. Confira as informações antes de continuar. \n\nNos dias 30/10 a 02/11/2026, não teremos agenda disponível. \n\nAgradecemos sua compreensão.",
 
   textoBotao: "Entendi, continuar",
 
