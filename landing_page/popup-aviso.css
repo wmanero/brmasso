@@ -1,0 +1,132 @@
+
+/* POPUP TEMPORÁRIO - ESPAÇO BÁRBARA RODRIGUES */
+
+#br-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(25, 15, 25, 0.68);
+  animation: br-popup-fundo 0.2s ease-out;
+}
+
+#br-popup {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 34px 26px 28px;
+  border-radius: 16px;
+  background: #f8f3f6;
+  color: #352532;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  font-family: Arial, sans-serif;
+  animation: br-popup-entrada 0.25s ease-out;
+}
+
+#br-popup-fechar {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #4c2144;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#br-popup-fechar:hover {
+  background: rgba(76, 33, 68, 0.08);
+}
+
+#br-popup h2 {
+  margin: 8px 0 14px;
+  color: #4c2144;
+  font-size: 25px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+#br-popup-mensagem {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+#br-popup-ok {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #4c2144;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#br-popup-ok:hover {
+  background: #774d3c;
+}
+
+#br-popup button:focus-visible {
+  outline: 3px solid #2596be;
+  outline-offset: 3px;
+}
+
+@keyframes br-popup-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes br-popup-fundo {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  #br-popup {
+    padding: 32px 20px 22px;
+  }
+
+  #br-popup h2 {
+    font-size: 22px;
+  }
+
+  #br-popup-mensagem {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #br-popup,
+  #br-popup-overlay {
+    animation: none;
+  }
+
+  #br-popup-ok {
+    transition: none;
+  }
+}
