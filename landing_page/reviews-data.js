@@ -317,5 +317,23 @@ window.BR_REVIEWS = [
     "stars": 5,
     "text": "Espaço aconchegante, de paz e muito acolhedor. Massagem muito relaxante , reconfortante maravilhosssooooooo super recomendo💖💖💖💖💖💖💖",
     "tags": []
+  },
+  {
+  "author": "Anna Beatriz",
+  "stars": 5,
+  "text": "Atendimento espetacular, com a pontualidade admirável e sessão de massagem relaxante incrível",
+  "tags": []
+  },
+  {
+  "author": "Marah Gomes",
+  "stars": 5,
+  "text": "Foi maravilhoso tudo de bom. Melhorou até o meu sono",
+  "tags": ["Ótimo preço"]
+  },
+  { 
+  "author": "Ronaldo Moreira",
+  "stars": 5,
+  "text": "Espaço aconchegante, atendimento muito profissional e humano. Excelente !!!",
+  "tags": []
   }
 ];
