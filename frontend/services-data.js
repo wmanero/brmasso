@@ -47,7 +47,7 @@ window.BR_SERVICES = {
       tagline: 'Foco em alívio e recuperação',
       description:
         'Trabalho direcionado às regiões com dor ou rigidez, combinando pressões e técnicas adequadas ao seu quadro para restaurar conforto e mobilidade.',
-      benefits: ['Alivia dores musculares', 'Reduz pontos de tensão', 'Melhora amplitude de movimento', 'Auxilia na recuperação pós-esforço'],
+      benefits: ['Contribui para aliviar tensões e desconfortos musculares', 'Reduz pontos de tensão', 'Melhora amplitude de movimento', 'Auxilia na recuperação pós-esforço'],
       duration: '50 min',
       price: null,
       img: './img/carrossel/post_terapeutica.png',
@@ -83,7 +83,7 @@ window.BR_SERVICES = {
       tagline: 'Leveza e equilíbrio corporal',
       description:
         'Técnica suave e ritmada que estimula o sistema linfático, favorecendo a eliminação de líquidos retidos e promovendo sensação de corpo mais leve e desinchado.',
-      benefits: ['Reduz inchaço e retenção', 'Estimula circulação linfática', 'Auxilia na recuperação pós-cirúrgica*', 'Promove detoxificação natural'],
+      benefits: ['Reduz inchaço e retenção', 'Estimula circulação linfática', 'Pode contribuir para reduzir inchaço Pós-Cirúrgico', 'Favorece sensação de leveza e bem-estar'],
       duration: '50 min',
       price: null,
       img: './img/carrossel/post_linfatica.png',
@@ -107,7 +107,7 @@ window.BR_SERVICES = {
       tagline: 'Liberdade para o movimento',
       description:
         'Trabalho na fáscia — tecido que envolve os músculos — para soltar aderências, melhorar postura e devolver amplitude de movimento com conforto progressivo.',
-      benefits: ['Reduz rigidez e aderências', 'Melhora postura', 'Aumenta mobilidade', 'Alivia dores crônicas leves'],
+      benefits: ['Reduz rigidez e aderências', 'Melhora postura', 'Aumenta mobilidade', 'Pode contribuir para reduzir tensões e desconfortos'],
       duration: '50 min',
       price: null,
       img: './img/carrossel/post_miofascial.png',
@@ -119,7 +119,7 @@ window.BR_SERVICES = {
       tagline: 'Alinhamento e alívio manual',
       description:
         'Conjunto de técnicas manuais voltadas ao alinhamento estrutural e ao alívio de desconfortos articulares e musculares, com abordagem cuidadosa e personalizada.',
-      benefits: ['Auxilia no alinhamento postural', 'Alivia tensões articulares', 'Melhora conforto no dia a dia', 'Complementa outras terapias'],
+      benefits: ['Contribui para uma melhor percepção corporal e postura', 'Alivia tensões articulares', 'Melhora conforto no dia a dia', 'Complementa outras terapias'],
       duration: '50 min',
       price: null,
       img: './img/carrossel/post_quiro.png',
@@ -131,7 +131,7 @@ window.BR_SERVICES = {
       tagline: 'Bem-estar pelos pontos reflexos',
       description:
         'Estimulação de pontos reflexos nos pés e mãos que correspondem a órgãos e sistemas do corpo, promovendo relaxamento integral e sensação de renovação.',
-      benefits: ['Relaxamento profundo', 'Estimula funções corporais', 'Reduz estresse', 'Melhora qualidade do sono'],
+      benefits: ['Relaxamento profundo', 'EFavorece relaxamento e percepção de bem-estar', 'Reduz estresse', 'Melhora qualidade do sono'],
       duration: '40 min',
       price: null,
       img: './img/carrossel/post_reflexologia.png',
