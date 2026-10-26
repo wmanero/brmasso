@@ -406,7 +406,7 @@ h3 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('./img/foto_espaco_01.jpeg') center / cover no-repeat;
+  background: url('./img/foto_espaco_01.png') center / cover no-repeat;
   background-color: var(--color-primary);
 }
 
